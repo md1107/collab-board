@@ -9,13 +9,13 @@ export default function BoardDetail({ boardId }) {
   const [editTask, setEditTask] = useState(null);
 
   const fetchTasks = () => {
-    axios.get(`http://localhost:3000/boards/${boardId}/tasks`).then(res => setTasks(res.data));
+    axios.get(`https://collab-board-o93c.onrender.com/boards/${boardId}/tasks`).then(res => setTasks(res.data));
   };
 
   useEffect(() => { fetchTasks(); }, [boardId]);
 
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:3000/tasks/${id}`);
+    await axios.delete(`https://collab-board-o93c.onrender.com/tasks/${id}`);
     fetchTasks();
   };
 

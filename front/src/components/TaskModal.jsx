@@ -10,7 +10,7 @@ export default function TaskModal({ boardId, onClose }) {
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
   const createTask = async () => {
-    await axios.post(`http://localhost:3000/boards/${boardId}/tasks`, form);
+    await axios.post(`https://collab-board-o93c.onrender.com/boards/${boardId}/tasks`, form);
     onClose();
   };
 

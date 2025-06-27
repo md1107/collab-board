@@ -9,7 +9,7 @@ export default function App() {
   const [selectedBoard, setSelectedBoard] = useState(null);
 
   const fetchBoards = () => {
-    axios.get('http://localhost:3000/boards').then(res => setBoards(res.data));
+    axios.get('https://collab-board-o93c.onrender.com/boards').then(res => setBoards(res.data));
   };
 
   useEffect(() => { fetchBoards(); }, []);

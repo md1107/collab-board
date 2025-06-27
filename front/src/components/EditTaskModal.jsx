@@ -7,7 +7,7 @@ export default function EditTaskModal({ task, onClose, onRefresh }) {
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
   const updateTask = async () => {
-    await axios.put(`http://localhost:3000/tasks/${task._id}`, form);
+    await axios.put(`https://collab-board-o93c.onrender.com/tasks/${task._id}`, form);
     onClose();
     onRefresh();
   };

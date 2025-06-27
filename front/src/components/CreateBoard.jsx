@@ -6,7 +6,7 @@ export default function CreateBoard({ onCreate }) {
 
   const createBoard = async () => {
     if (!name.trim()) return;
-    await axios.post('http://localhost:3000/boards', { name });
+    await axios.post('https://collab-board-o93c.onrender.com/boards', { name });
     onCreate();
     setName('');
   };
