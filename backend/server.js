@@ -7,7 +7,7 @@ const boardRoutes = require('./routes/boards');
 const taskRoutes = require('./routes/tasks');
 
 const app = express();
-app.use(cors({origin: 'http://localhost:5173'}));
+app.use(cors({origin: '*'}));
 app.use(express.json());
 
 app.use('/boards', boardRoutes);
@@ -18,5 +18,5 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true,
 }).then(() => {
   console.log('Connected to MongoDB');
-  app.listen(3000, () => console.log('Server running on port 3000'));
+  app.listen(4000,() => console.log('Server running on port4000'));
 }).catch(err => console.error(err));
